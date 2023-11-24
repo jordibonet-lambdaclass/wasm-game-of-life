@@ -1,1 +1,3 @@
-# wasm-game-of-life
+# Conway's Game of Life [Rust 🦀 + WASM 🕸️]
+
+
