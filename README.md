@@ -1,5 +1,7 @@
 # Conway's Game of Life [Rust 🦀 + WASM 🕸️]
 
+Try it: https://conway-jordi.vercel.app/
+
 ## Requirements 
 
 You need to have installed the Rust toolchain `rustup`. On a Unix system:
