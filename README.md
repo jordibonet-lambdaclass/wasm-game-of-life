@@ -1,5 +1,25 @@
 # Conway's Game of Life [Rust 🦀 + WASM 🕸️]
 
+## Requirements 
+
+You need to have installed the Rust toolchain `rustup`. On a Unix system:
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+You need to have installed `wasm-pack`. On a Unix system:
+```sh
+curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+```
+Using cargo:
+```sh
+cargo install wasm-pack
+```
+Using npm:
+```sh
+npm install -g wasm-pack
+```
+
 ## Generate web server code
 
 Generate WASM:
