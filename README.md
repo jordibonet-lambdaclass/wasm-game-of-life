@@ -34,6 +34,11 @@ npm init wasm-app web
 ```
 This will generate a `web` directory.
 
+Move the `pkg` directory into `web` directory, remove the `pkg` directory and remove `.gitignore`:
+```sh
+cp -rf pkg web && rm -r pkg && rm web/pkg/.gitignore
+```
+
 ## Run the web server
 
 ```sh
