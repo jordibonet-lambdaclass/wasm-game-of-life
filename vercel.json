@@ -1,0 +1,7 @@
+{
+    "builds": [
+      { "src": "web/**", "use": "@vercel/static" },
+      { "src": "pkg/**", "use": "@vercel/static" }
+    ]
+  }
+  
