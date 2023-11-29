@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
     <title>Conway's Game Of Life</title>
     <style>
       body {
@@ -14,11 +15,50 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: #303030; 
+        color: #ffffff; 
+        font-family: 'Inconsolata', monospace;
+      }
+
+      #title {
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 24px;
+        position: relative;
+      }
+
+      footer {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      footer a {
+        text-decoration: none;
+        color: #0077cc;
+        transition: color 0.3s;
+      }
+
+      footer a:hover {
+        color: #004466; 
+      }
+
+      footer img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
       }
     </style>
   </head>
   <body>
+    <h1 id="title">Conway's Game Of Life</h1>
     <canvas id="game-of-life-canvas"></canvas>
     <script type="module" src="./bootstrap.js"></script>
+    <footer>
+      <a href="https://github.com/jordibonet-lambdaclass/wasm-game-of-life" target="_blank">
+        <img src="./github.svg" alt="GitHub Icon" style="height: 4em; width: 4em;">
+        GitHub Repository
+      </a>
+    </footer>
   </body>
 </html>
