@@ -2,6 +2,10 @@
 
 Try it: https://conway-jordi.vercel.app/
 
+## What is Conway's Game of Life?
+
+This a Rust implementation of Cownway's Game Of Life using WebAssembly.
+
 ## Requirements 
 
 You need to have installed the Rust toolchain `rustup`. On a Unix system:
