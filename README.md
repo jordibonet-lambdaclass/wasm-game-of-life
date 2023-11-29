@@ -1,5 +1,11 @@
 # Conway's Game of Life [Rust 🦀 + WASM 🕸️]
 
+Try it: https://conway-jordi.vercel.app/
+
+## What is Conway's Game of Life?
+
+This a Rust implementation of Cownway's Game Of Life using WebAssembly.
+
 ## Requirements 
 
 You need to have installed the Rust toolchain `rustup`. On a Unix system:
@@ -20,27 +26,31 @@ Using npm:
 npm install -g wasm-pack
 ```
 
+Finally, you must have [NodeJS](https://nodejs.org/en/download) installed.
+
 ## Generate web server code
 
-Generate WASM:
+Generate the WebAssembly binary running this command:
 ```sh
 wasm-pack build
 ```
-This will generate a `pkg` directory.
+This will create a `pkg` directory.
 
-Generate NodeJS app:
+Initialize the NodeJS application:
 ```sh
 npm init wasm-app web
 ```
 This will generate a `web` directory.
 
-Move the `pkg` directory into `web` directory, remove the `pkg` directory and remove `.gitignore`:
+Move the `pkg` directory into `web` directory. 
 ```sh
 cp -rf pkg web && rm -r pkg && rm web/pkg/.gitignore
 ```
+Also we removed the `pkg` directory and the `.gitignore` file (for deployment).
 
 ## Run the web server
 
+You can start the NodeJS server using the following commands:
 ```sh
 cd web
 npm cache clean -f
@@ -48,3 +58,11 @@ rm -rf node_modules package-lock.json
 npm i
 npm run start
 ```
+
+## Deploy the app
+
+For example, we can use Vercel to deploy our app.
+
+You can deploy it with the following configuration:
+
+![Vercel configuration](./vercel_deploy.png)
