@@ -14,9 +14,11 @@ export class Universe {
 */
   tick(): void;
 /**
+* @param {number | undefined} [width]
+* @param {number | undefined} [height]
 * @returns {Universe}
 */
-  static new(): Universe;
+  static new(width?: number, height?: number): Universe;
 /**
 * @returns {string}
 */
