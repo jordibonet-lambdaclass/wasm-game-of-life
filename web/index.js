@@ -12,7 +12,12 @@ const screenWidth = Math.floor(window.innerWidth / (CELL_SIZE + 1));
 const screenHeight = Math.floor(window.innerHeight / (CELL_SIZE + 1)); 
 
 // multiples of 32, at least 64
-const universeWidth = Math.max(64, Math.ceil(screenWidth / 32) * 32) - 4;
+let universeWidth = Math.max(64, Math.ceil(screenWidth / 32) * 32);
+if (window.innerWidth > 380 && window.innerWidth < 500) {
+    universeWidth -= 32
+} else {
+    universeWidth -= 4
+}
 const universeHeight = Math.max(64, Math.ceil(screenHeight / 32) * 32);
 
 // Construct the universe, and get its width and height.
