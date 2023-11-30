@@ -3,12 +3,20 @@ import { Universe, Cell } from "./pkg/wasm_game_of_life";
 import { memory } from "./pkg/wasm_game_of_life_bg";
 
 const CELL_SIZE = 5; // px
-const GRID_COLOR = "#CCCCCC";
-const DEAD_COLOR = "#FFFFFF";
-const ALIVE_COLOR = "#000000";
+const GRID_COLOR = "#";
+const DEAD_COLOR = "#000000";
+const ALIVE_COLOR = "#00FF00";
+
+// Get screen width and height 
+const screenWidth = Math.floor(window.innerWidth / (CELL_SIZE + 1));
+const screenHeight = Math.floor(window.innerHeight / (CELL_SIZE + 1)); 
+
+// multiples of 32, at least 64
+const universeWidth = Math.max(64, Math.ceil(screenWidth / 32) * 32) - 4;
+const universeHeight = Math.max(64, Math.ceil(screenHeight / 32) * 32);
 
 // Construct the universe, and get its width and height.
-const universe = Universe.new();
+const universe = Universe.new(universeWidth, universeHeight);
 const width = universe.width();
 const height = universe.height();
 
