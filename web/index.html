@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABp1BMVEX////////////////////////////////////////////////////////////////////////////////+/v78/Pz9/f38/P2urrFfX2RhYWaamp2/v8EYGB8MDBMKChIvLzXe3t/09PRRUVcNDRQQEBeVlZiYmJsNDRVFRUrt7e55eX0ODhUWFh2xsbPb29wuLjQPDxYRERhdXWL4+PiOjpEhISfJycvo6Ok9PUITExoiIil4eHyjo6aZmZweHiQODhYwMDby8vJOTlN2dnry8vNSUle3t7kZGSDIyMqlpahEREnt7e34+PlgYGXn5+g7O0GwsLLIyMkgICe1tbeKio1cXGFycndLS1Dw8PHW1tcqKjDJycrV1dcpKS8SEhmhoaRubnJ4eHuNjZAbGyLBwcIcHCMvLzbd3d79/f7X19nGxsfMzM7u7u/19fVVVVqRkZT09PXu7u7x8fHx8fLv7/AyMjjExMbv7+/w8PCurrA9PUM+PkM+PkQ1NTskJCo8PEJCQkjBwcPa2tssLDILCxJnZ2v6+voKChEMDBTNzc7T09S2trlkJvY8AAAAE3RSTlMQhOvujhSF+fuT6fPs9f2c9Pca5haQ8gAAAAFiS0dEAIgFHUgAAAAHdElNRQfmBAwONSrAi20tAAABYklEQVQ4y4XT6TsCQRzA8UVRrrAHlVLMECbMlLBCcl85ct/3ve47N+X8o5X0PKt2t+++2N/z/D4vZl4MRaWk0rKlqdRUegatkEZLZdKKZVF0ksSAYVmukFEAdJHeoDdyCqDYZC6xWBVAaRmAsFwB0BUQ2iqr5AFTjSC018iD2jpMCHA4ZUE9huHP1SAHGpsQ30wIcjMyoIVHltY26Gm3SgNvB7B1dnXH3VQEenqxq4/u5yEaGJQCQz4A9E56eARB+6gUGPNj03j4P4EhmHQmAm4KgOmZ8DA7h7F/PhEsLKKl5cjArgBiW2USwJpp3RE928YmxFvb8WBnd29fiI4Hh+GbHonB8YkgCKfes3PhN6+Rh56Ly6trNgZuAoFbUXf3PCT44fHpOQZeXs3oX5AQglEw9PYHGPf7h0RB/2fskF8hg1S+7xhgOMnYyBtI/nCylfc5lEqjtM/VUWptnvw+X1fwA3AvhEk99kQpAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA0LTEyVDE0OjUzOjQyKzAwOjAwH6HPwgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNC0xMlQxNDo1Mzo0MiswMDowMG78d34AAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII=" type="image/x-icon">
     <title>Conway's Game Of Life</title>
     <style>
       body {
@@ -60,12 +61,17 @@
     <script type="module" src="./bootstrap.js"></script>
     <footer>
         <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-        <a href="https://github.com/jordibonet-lambdaclass/wasm-game-of-life" target="_blank">
-          <img src="./github.svg" alt="GitHub Icon" style="height: 4em; width: 4em;">
-          <span>GitHub Repository</span>
-        </a>
-        <img src="./logo-lambda.png" alt="LambdaClass Logo" style="height: 10em; width: 20em;">
-      </div>
+          <a href="https://github.com/jordibonet-lambdaclass/wasm-game-of-life" target="_blank">
+            <img src="./github.svg" alt="GitHub Icon" style="height: 4em; width: 4em;">
+            <span>GitHub Repository</span>
+          </a>
+          <img src="./logo-lambda.png" alt="LambdaClass Logo" style="height: 10em; width: 20em; cursor: pointer;" onclick="navigateToExternalPage('https://lambdaclass.com/')">
+        </div>
     </footer>
+    <script>
+      function navigateToExternalPage(url) {
+        window.open(url, '_blank');
+      }
+    </script>
   </body>
 </html>
