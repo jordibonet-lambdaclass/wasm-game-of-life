@@ -76,10 +76,10 @@ impl Universe {
         self.cells = next;
     }
 
-    // Universe constructor
-    pub fn new() -> Universe {
-        let width = 64;
-        let height = 64;
+    // Universe constructor with optional values
+    pub fn new(width: Option<u32>, height: Option<u32>) -> Universe {
+        let width = width.unwrap_or(64);
+        let height = height.unwrap_or(64);
 
         let cells = (0..width * height)
             .map(|i| {

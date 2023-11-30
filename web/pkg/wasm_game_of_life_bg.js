@@ -24,6 +24,10 @@ function getStringFromWasm0(ptr, len) {
     return cachedTextDecoder.decode(getUint8Memory0().subarray(ptr, ptr + len));
 }
 
+function isLikeNone(x) {
+    return x === undefined || x === null;
+}
+
 let cachedInt32Memory0 = null;
 
 function getInt32Memory0() {
@@ -64,10 +68,12 @@ export class Universe {
         wasm.universe_tick(this.__wbg_ptr);
     }
     /**
+    * @param {number | undefined} [width]
+    * @param {number | undefined} [height]
     * @returns {Universe}
     */
-    static new() {
-        const ret = wasm.universe_new();
+    static new(width, height) {
+        const ret = wasm.universe_new(!isLikeNone(width), isLikeNone(width) ? 0 : width, !isLikeNone(height), isLikeNone(height) ? 0 : height);
         return Universe.__wrap(ret);
     }
     /**
