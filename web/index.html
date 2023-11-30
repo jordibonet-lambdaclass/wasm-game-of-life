@@ -14,10 +14,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: top;
         background-color: #303030; 
         color: #ffffff; 
         font-family: 'Inconsolata', monospace;
+        gap: 1em;
+        padding-top: 2em;
+        margin: 0;
       }
 
       #title {
@@ -37,6 +40,13 @@
         text-decoration: none;
         color: #0077cc;
         transition: color 0.3s;
+      }
+
+      canvas {
+        width: 100vmin; /* 80% del tamaño mínimo entre ancho y altura de la ventana */
+        height: 100vmin; /* Mismo valor que el ancho para mantener un aspecto cuadrado */
+        max-width: 700px; /* Ancho máximo para evitar que el canvas sea demasiado grande en pantallas grandes */
+        max-height: 700px; 
       }
 
       footer a:hover {
